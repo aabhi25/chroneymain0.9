@@ -88,7 +88,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
         await transporter.sendMail({
           from: '"AI Chroney Contact Form" <noreply@aichroney.com>',
-          to: "hello@aichroney.com",
+          to: "gopika@aichroney.com",
           subject: `New Contact Form Submission from ${escapedName}`,
           html: `
             <h2>New Contact Form Submission</h2>

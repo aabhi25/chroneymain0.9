@@ -96,7 +96,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-semibold text-[#0C1445] mb-4">9. Contact Us</h2>
               <p className="leading-relaxed">
-                If you have questions about this Privacy Policy or wish to exercise your rights, please contact us at hello@aichroney.com or through our Contact page.
+                If you have questions about this Privacy Policy or wish to exercise your rights, please contact us at gopika@aichroney.com or through our Contact page.
               </p>
             </section>
           </div>

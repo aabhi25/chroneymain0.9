@@ -120,7 +120,7 @@ export default function TermsAndConditions() {
             <section>
               <h2 className="text-2xl font-semibold text-[#0C1445] mb-4">13. Contact Information</h2>
               <p className="leading-relaxed">
-                For questions about these Terms and Conditions, please contact us at hello@aichroney.com or through our Contact page.
+                For questions about these Terms and Conditions, please contact us at gopika@aichroney.com or through our Contact page.
               </p>
             </section>
           </div>

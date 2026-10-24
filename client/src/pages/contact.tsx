@@ -23,7 +23,7 @@ function openChatWidget() {
     widgetBtn.click();
     return;
   }
-  window.location.href = "mailto:hello@aichroney.com?subject=Business%20Inquiry&body=Hi%20AI%20Chroney%20team%2C%0A%0AI'd%20like%20to%20learn%20more%20about%20your%20AI%20chatbot%20solution.";
+  window.location.href = "mailto:gopika@aichroney.com?subject=Business%20Inquiry&body=Hi%20AI%20Chroney%20team%2C%0A%0AI'd%20like%20to%20learn%20more%20about%20your%20AI%20chatbot%20solution.";
 }
 
 export default function Contact() {
@@ -31,7 +31,7 @@ export default function Contact() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Contact Us – Get AI Chroney for Your Business | Schedule Demo</title>
-        <meta name="description" content="Contact AI Chroney to grow your business with AI. Schedule a free demo, get pricing info, or ask questions about our chatbot widget. Email: hello@aichroney.com | WhatsApp: +91-9999-0808-25" />
+        <meta name="description" content="Contact AI Chroney to grow your business with AI. Schedule a free demo, get pricing info, or ask questions about our chatbot widget. Email: gopika@aichroney.com | WhatsApp: +91-9999-0808-25" />
         <link rel="canonical" href="https://aichroney.com/contact" />
       </Helmet>
       <Navigation />
@@ -68,14 +68,14 @@ export default function Contact() {
               <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
                 <h2 className="text-xl font-bold text-[#0C1445] mb-6">Get in touch</h2>
                 <div className="space-y-6">
-                  <a href="mailto:hello@aichroney.com" className="flex items-start group">
+                  <a href="mailto:gopika@aichroney.com" className="flex items-start group">
                     <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                       <Mail className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-[#0C1445] text-sm mb-0.5">Email</h3>
                       <span className="text-gray-500 hover:text-[#9333EA] transition-colors text-sm">
-                        hello@aichroney.com
+                        gopika@aichroney.com
                       </span>
                     </div>
                   </a>
