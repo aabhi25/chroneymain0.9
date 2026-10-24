@@ -3,6 +3,8 @@ import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import MarketingEngineSection from "@/components/marketing-engine-section";
+import ProofAndCustomSection from "@/components/proof-and-custom-section";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -17,7 +19,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs";
-import { MessageCircle, Zap, Users, Settings, Code, Sparkles, RefreshCw, ArrowRight, Target, ShoppingCart, Calendar, Package, HelpCircle, Eye, Gift, ClipboardCheck, UserPlus, Search, Palette } from "lucide-react";
+import { MessageCircle, Zap, Users, Settings, Code, Sparkles, RefreshCw, ArrowRight, Target, ShoppingCart, Calendar, Package, HelpCircle, Eye, Gift, ClipboardCheck, UserPlus, Search, Palette, Phone } from "lucide-react";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import nikeAirMaxImage from "@assets/stock_images/nike_air_max_90_snea_6823c7b1.jpg";
@@ -88,12 +90,13 @@ export default function Home() {
   const channels = [
     { key: "website", label: "Website", icon: MessageCircle, bg: "bg-gradient-to-br from-[#FF4D4D] to-[#9333EA]", ring: "ring-purple-200" },
     { key: "whatsapp", label: "WhatsApp", icon: FaWhatsapp, bg: "bg-[#25D366]", ring: "ring-green-200" },
-    { key: "instagram", label: "Instagram", icon: FaInstagram, bg: "bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF]", ring: "ring-pink-200" },
+    { key: "phone", label: "AI Calls", icon: Phone, bg: "bg-gradient-to-br from-blue-500 to-indigo-600", ring: "ring-blue-200" },
+    { key: "instagram", label: "Instagram & Facebook", icon: FaInstagram, bg: "bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF]", ring: "ring-pink-200" },
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setHeroChannel(prev => (prev + 1) % 3);
+      setHeroChannel(prev => (prev + 1) % channels.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -133,8 +136,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>AI Chroney – AI Chatbot Widget for Sales, Support & Lead Generation</title>
-        <meta name="description" content="Embeddable AI chatbot widget that automates sales, provides 24/7 support, and captures leads. Powered by GPT, Claude & Gemini. See live chat examples and try free demo." />
+        <title>AI Chroney – AI Marketing Engine: Chat, WhatsApp & AI Calls That Convert</title>
+        <meta name="description" content="AI Chroney turns prospects into customers with AI agents for your website, WhatsApp, Instagram, Facebook and phone calls, all sharing one memory. Plus custom AI solutions with an MVP in 14 days." />
         <link rel="canonical" href="https://aichroney.com/" />
       </Helmet>
       <Navigation />
@@ -193,21 +196,29 @@ export default function Home() {
               </div>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#0C1445] mb-4 sm:mb-6">
-              AI Agents That <span className="bg-gradient-to-r from-[#FF4D4D] to-[#9333EA] bg-clip-text text-transparent">Sell & Support Customers</span>
+              The AI Marketing Engine That <span className="bg-gradient-to-r from-[#FF4D4D] to-[#9333EA] bg-clip-text text-transparent">Turns Prospects Into Customers</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-2xl mx-auto">
-              Answer product queries, automate support, and capture leads on Website, WhatsApp & Instagram.
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 sm:mb-10 max-w-3xl mx-auto">
+              AI agents that chat on your website, message on WhatsApp, reply on Instagram & Facebook and call your leads, all sharing one memory and following up until they convert.
             </p>
-            <a href="https://wa.me/919999080825" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-[#FF4D4D] to-[#9333EA] hover:opacity-90 text-white text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                Get Started
-              </Button>
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+              <a href="https://wa.me/919999080825" target="_blank" rel="noopener noreferrer">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-[#FF4D4D] to-[#9333EA] hover:opacity-90 text-white text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  Book a Demo
+                </Button>
+              </a>
+              <a href="#engine" className="inline-flex items-center gap-2 text-base sm:text-lg font-medium text-[#0C1445] hover:text-[#9333EA] transition-colors px-4 py-3">
+                See how it works
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </section>
+
+        <MarketingEngineSection />
 
         {/* AI Agents Section */}
         <section className="py-20 sm:py-28 px-4 bg-gradient-to-b from-gray-50/50 to-white">
@@ -618,13 +629,13 @@ export default function Home() {
                 Multi-Channel AI
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0C1445] mb-3">
-                One agent. <span className="bg-gradient-to-r from-[#FF4D4D] to-[#9333EA] bg-clip-text text-transparent">Deployed everywhere.</span>
+                Every channel. <span className="bg-gradient-to-r from-[#FF4D4D] to-[#9333EA] bg-clip-text text-transparent">One memory.</span>
               </h2>
-              <p className="text-gray-500 text-base sm:text-lg max-w-lg mx-auto">
-                Each channel, fully automated.
+              <p className="text-gray-500 text-base sm:text-lg max-w-xl mx-auto">
+                Four AI agents that work as one team and know every conversation a prospect has had.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
                   icon: MessageCircle,
@@ -635,9 +646,9 @@ export default function Home() {
                   borderHover: "hover:border-purple-200",
                   link: "/products/chroney-assist",
                   items: [
-                    "Greets visitors and answers product questions",
-                    "Recommends products and closes deals via chat",
-                    "Captures leads automatically, 24/7",
+                    "Answers questions and captures leads 24/7",
+                    "Recommends products and closes deals",
+                    "Passes context to every other channel",
                   ],
                 },
                 {
@@ -649,23 +660,37 @@ export default function Home() {
                   borderHover: "hover:border-green-200",
                   link: "/products/whatsapp-agent",
                   items: [
-                    "Replies to customer messages instantly",
-                    "Handles order queries and support requests",
-                    "Qualifies and collects leads on autopilot",
+                    "Follows up on every new lead instantly",
+                    "Sends campaigns, reminders and brochures",
+                    "Qualifies leads and handles support",
+                  ],
+                },
+                {
+                  icon: Phone,
+                  title: "AI Calling Agent",
+                  tagline: "A voice that never misses a lead",
+                  tagColor: "text-blue-600",
+                  iconBg: "bg-gradient-to-br from-blue-500 to-indigo-600",
+                  borderHover: "hover:border-blue-200",
+                  link: "/products/ai-calling-agent",
+                  items: [
+                    "Calls new leads within minutes",
+                    "Answers incoming calls 24/7",
+                    "Qualifies and books meetings",
                   ],
                 },
                 {
                   icon: FaInstagram,
-                  title: "Instagram Agent",
-                  tagline: "Where your audience already is",
+                  title: "Meta Agent",
+                  tagline: "Instagram & Facebook",
                   tagColor: "text-[#C13584]",
                   iconBg: "bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF]",
                   borderHover: "hover:border-pink-200",
                   link: "/products/instagram-agent",
                   items: [
                     "Auto-responds to DMs and comments",
-                    "Turns followers into paying customers",
-                    "Captures leads from every post and reel",
+                    "Turns followers into customers",
+                    "Captures leads from ads, posts and reels",
                   ],
                 },
               ].map((agent, index) => (
@@ -677,7 +702,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: index * 0.15 }}
                 >
                   <Link href={agent.link}>
-                    <div className={`group bg-white/70 backdrop-blur-sm rounded-3xl border border-gray-100 ${agent.borderHover} p-8 sm:p-10 h-full cursor-pointer hover:shadow-xl hover:-translate-y-2 transition-all duration-500`}>
+                    <div className={`group bg-white/70 backdrop-blur-sm rounded-3xl border border-gray-100 ${agent.borderHover} p-7 h-full cursor-pointer hover:shadow-xl hover:-translate-y-2 transition-all duration-500`}>
                       <div className="text-center mb-6">
                         <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl ${agent.iconBg} mb-5 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
                           <agent.icon className="w-7 h-7 text-white" />
@@ -827,6 +852,8 @@ export default function Home() {
             </motion.p>
           </div>
         </section>
+
+        <ProofAndCustomSection />
 
         <section className="py-16 sm:py-24 bg-gray-50 overflow-hidden">
           <div className="max-w-6xl mx-auto text-center px-4 mb-10 sm:mb-14">

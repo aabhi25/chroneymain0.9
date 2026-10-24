@@ -59,7 +59,7 @@ export default function AIVista() {
     { icon: Layers, title: "Product similarity detection", description: "Match products across vast catalogs", color: "from-purple-500 to-pink-500" },
     { icon: Sparkles, title: "AI-generated creative assets", description: "Studio-quality images on demand", color: "from-amber-500 to-orange-500" },
     { icon: Image, title: "Scalable for thousands of SKUs", description: "Enterprise-ready performance", color: "from-green-500 to-emerald-500" },
-    { icon: Shield, title: "Enterprise-grade security", description: "SOC 2 compliant infrastructure", color: "from-red-500 to-rose-500" },
+    { icon: Shield, title: "Enterprise-grade security", description: "Encrypted, access-controlled data", color: "from-red-500 to-rose-500" },
     { icon: Eye, title: "Real-time visual analysis", description: "Instant image understanding", color: "from-indigo-500 to-violet-500" },
   ];
 

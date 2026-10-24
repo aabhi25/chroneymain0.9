@@ -62,7 +62,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-semibold text-[#0C1445] mb-4">5. Data Security</h2>
               <p className="leading-relaxed">
-                We implement industry-standard security measures including encryption, secure data centers, and access controls to protect your information. Our infrastructure is SOC 2 compliant, and we regularly audit our security practices.
+                We implement industry-standard security measures including encryption, secure data centers, and access controls to protect your information. We regularly review and update our security practices.
               </p>
             </section>
 

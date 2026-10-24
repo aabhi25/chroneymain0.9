@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Globe, MessageCircle } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, MessageCircle, Phone } from "lucide-react";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { Link, useLocation } from "wouter";
 import Logo from "@/components/logo";
@@ -105,6 +105,19 @@ export default function Navigation() {
                       </div>
                     </Link>
                     <Link 
+                      href="/products/ai-calling-agent"
+                      className="flex items-center gap-3 px-4 py-2.5 hover:bg-muted transition-colors duration-200"
+                      onClick={closeDropdown}
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
+                        <Phone className="w-4 h-4 text-white" />
+                      </div>
+                      <div>
+                        <div className="font-medium text-foreground text-sm">AI Calling Agent</div>
+                        <div className="text-xs text-muted-foreground">AI voice calls, inbound & outbound</div>
+                      </div>
+                    </Link>
+                    <Link 
                       href="/products/instagram-agent"
                       className="flex items-center gap-3 px-4 py-2.5 hover:bg-muted transition-colors duration-200"
                       onClick={closeDropdown}
@@ -113,8 +126,8 @@ export default function Navigation() {
                         <FaInstagram className="w-4 h-4 text-white" />
                       </div>
                       <div>
-                        <div className="font-medium text-foreground text-sm">Instagram Agent</div>
-                        <div className="text-xs text-muted-foreground">DM automation for Instagram</div>
+                        <div className="font-medium text-foreground text-sm">Meta Agent</div>
+                        <div className="text-xs text-muted-foreground">Instagram & Facebook DMs and comments</div>
                       </div>
                     </Link>
                     <hr className="my-2 border-border" />
@@ -137,6 +150,20 @@ export default function Navigation() {
                   </div>
                 )}
               </div>
+              <Link 
+                href="/custom-ai-solutions"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                data-testid="nav-custom-ai"
+              >
+                Custom AI
+              </Link>
+              <Link 
+                href="/case-studies/jaro-education"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                data-testid="nav-case-studies"
+              >
+                Case Studies
+              </Link>
               <Link 
                 href="/playground"
                 className="text-muted-foreground hover:text-foreground transition-colors duration-200"
@@ -236,6 +263,16 @@ export default function Navigation() {
                     WhatsApp Agent
                   </Link>
                   <Link 
+                    href="/products/ai-calling-agent"
+                    className="flex items-center gap-2.5 px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200"
+                    onClick={closeMobile}
+                  >
+                    <div className="w-6 h-6 rounded-md bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-3 h-3 text-white" />
+                    </div>
+                    AI Calling Agent
+                  </Link>
+                  <Link 
                     href="/products/instagram-agent"
                     className="flex items-center gap-2.5 px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200"
                     onClick={closeMobile}
@@ -243,7 +280,7 @@ export default function Navigation() {
                     <div className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #F58529, #DD2A7B, #8134AF)' }}>
                       <FaInstagram className="w-3 h-3 text-white" />
                     </div>
-                    Instagram Agent
+                    Meta Agent
                   </Link>
                   <hr className="my-1.5 mx-3 border-border" />
                   <div className="px-3 pt-1 pb-1">
@@ -262,6 +299,22 @@ export default function Navigation() {
                 </div>
               )}
             </div>
+            <Link 
+              href="/custom-ai-solutions"
+              className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200 w-full text-left"
+              data-testid="nav-custom-ai-mobile"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Custom AI
+            </Link>
+            <Link 
+              href="/case-studies/jaro-education"
+              className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200 w-full text-left"
+              data-testid="nav-case-studies-mobile"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Case Studies
+            </Link>
             <Link 
               href="/playground"
               className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200 w-full text-left"

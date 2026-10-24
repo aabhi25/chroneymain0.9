@@ -12,6 +12,9 @@ import ChroneyAssist from "@/pages/chroney-assist";
 import AIVista from "@/pages/ai-vista";
 import WhatsAppAgent from "@/pages/whatsapp-agent";
 import InstagramAgent from "@/pages/instagram-agent";
+import AICallingAgent from "@/pages/ai-calling-agent";
+import JaroCaseStudy from "@/pages/case-study-jaro";
+import CustomAISolutions from "@/pages/custom-ai-solutions";
 import PrivacyPolicy from "@/pages/privacy-policy";
 import TermsAndConditions from "@/pages/terms-and-conditions";
 import NotFound from "@/pages/not-found";
@@ -27,6 +30,9 @@ function Router() {
       <Route path="/products/ai-vista" component={AIVista} />
       <Route path="/products/whatsapp-agent" component={WhatsAppAgent} />
       <Route path="/products/instagram-agent" component={InstagramAgent} />
+      <Route path="/products/ai-calling-agent" component={AICallingAgent} />
+      <Route path="/case-studies/jaro-education" component={JaroCaseStudy} />
+      <Route path="/custom-ai-solutions" component={CustomAISolutions} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-and-conditions" component={TermsAndConditions} />
       <Route component={NotFound} />
