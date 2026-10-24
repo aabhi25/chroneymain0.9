@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
+import NvidiaBadge from "@/components/nvidia-badge";
 import { motion } from "framer-motion";
 import { ArrowRight, Rocket, Search, PenTool, Code, FlaskConical, BookOpen, Workflow, FileSearch, Phone, AppWindow, Plug, Layers, ShieldCheck, Target, Cpu } from "lucide-react";
 
@@ -148,6 +149,9 @@ export default function CustomAISolutions() {
                   </div>
                 </motion.div>
               ))}
+            </div>
+            <div className="mt-10 flex justify-center">
+              <NvidiaBadge />
             </div>
           </div>
         </section>

@@ -5,6 +5,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import MarketingEngineSection from "@/components/marketing-engine-section";
 import ProofAndCustomSection from "@/components/proof-and-custom-section";
+import NvidiaBadge from "@/components/nvidia-badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -889,6 +890,9 @@ export default function Home() {
             </div>
           </div>
           <p className="mt-10 text-gray-400 text-sm text-center">and many more...</p>
+          <div className="mt-10 flex justify-center px-4">
+            <NvidiaBadge />
+          </div>
         </section>
 
       </main>

@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import Logo from "@/components/logo";
+import NvidiaBadge from "@/components/nvidia-badge";
 
 export default function Footer() {
   return (
@@ -15,9 +16,12 @@ export default function Footer() {
             </Link>
           </div>
           
-          <p className="text-sm sm:text-base font-medium opacity-90">
-            The AI marketing engine
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5">
+            <p className="text-sm sm:text-base font-medium opacity-90">
+              The AI marketing engine
+            </p>
+            <NvidiaBadge variant="dark" />
+          </div>
         </div>
 
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4 text-sm">
