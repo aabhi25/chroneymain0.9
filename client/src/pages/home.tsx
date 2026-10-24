@@ -5,7 +5,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import MarketingEngineSection from "@/components/marketing-engine-section";
 import ProofAndCustomSection from "@/components/proof-and-custom-section";
-import NvidiaBadge from "@/components/nvidia-badge";
+import NvidiaBadge, { NvidiaMark, NVIDIA_BADGE_PREFIX, NVIDIA_BADGE_PROGRAM } from "@/components/nvidia-badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -143,9 +143,9 @@ export default function Home() {
       </Helmet>
       <Navigation />
       <main>
-        <section className="pt-24 pb-16 sm:pt-32 sm:pb-24 px-4">
+        <section className="pt-16 pb-16 sm:pt-20 sm:pb-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex flex-col items-center mb-6 sm:mb-8">
+            <div className="flex flex-col items-center mb-5 sm:mb-6">
               <div className="relative w-20 h-20 sm:w-24 sm:h-24 mb-3">
                 <motion.div
                   key={`ring-${heroChannel}`}
@@ -215,6 +215,14 @@ export default function Home() {
                 See how it works
                 <ArrowRight className="w-5 h-5" />
               </a>
+            </div>
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-sm text-gray-500">
+              <span className="inline-flex items-center gap-2">
+                <NvidiaMark className="w-5 h-5" />
+                <span>{NVIDIA_BADGE_PREFIX} <span className="font-semibold text-gray-700">{NVIDIA_BADGE_PROGRAM}</span></span>
+              </span>
+              <span className="hidden sm:inline text-gray-300" aria-hidden="true">·</span>
+              <span>Trusted by <span className="font-semibold text-gray-700">LG, Jaro Education, Symbiosis</span></span>
             </div>
           </div>
         </section>
