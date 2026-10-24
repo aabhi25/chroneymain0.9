@@ -4,7 +4,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowLeft, GraduationCap, TrendingUp, Clock, MoonStar, HelpCircle, Hourglass, Globe, Brain, UserCheck, CheckCircle } from "lucide-react";
+import { ArrowRight, ArrowLeft, GraduationCap, TrendingUp, Clock, MoonStar, HelpCircle, Hourglass, Globe, Brain, UserCheck, CheckCircle, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const challenges = [
@@ -16,11 +16,13 @@ const challenges = [
 const solution = [
   { icon: Globe, iconBg: "bg-gradient-to-br from-[#FF4D4D] to-[#9333EA]", title: "Website Agent trained on every program", text: "AI Chroney learned Jaro's full program catalogue, so it answers detailed questions about courses, fees, eligibility and EMI instantly and captures the lead in the same conversation." },
   { icon: FaWhatsapp, iconBg: "bg-[#25D366]", title: "Instant WhatsApp follow-up", text: "New leads hear from Jaro on WhatsApp within minutes, with program details and next steps, while their interest is at its peak." },
-  { icon: Brain, iconBg: "bg-gradient-to-br from-blue-500 to-indigo-600", title: "One memory across channels", text: "Every conversation, on the website or on WhatsApp, is part of a single lead profile, so prospects never have to repeat themselves." },
+  { icon: Phone, iconBg: "bg-gradient-to-br from-blue-500 to-indigo-600", title: "AI Calling Agent that qualifies every lead", text: "The AI Calling Agent calls new leads, answers their questions about programs and fees, and qualifies them before they reach a counsellor." },
+  { icon: Brain, iconBg: "bg-gradient-to-br from-violet-500 to-purple-600", title: "One memory across channels", text: "Every conversation, on the website, on WhatsApp or on a call, is part of a single lead profile, so prospects never have to repeat themselves." },
   { icon: UserCheck, iconBg: "bg-[#0C1445]", title: "Counsellors get warm, informed leads", text: "Counsellors receive each lead with the program of interest and a summary of what was discussed, ready for a focused conversation." },
 ];
 
 const outcomes = [
+  "Every new lead called and qualified by the AI Calling Agent",
   "Every visitor enquiry answered instantly, day or night",
   "Leads captured inside the conversation, not just through forms",
   "Counsellors start calls with full context instead of a cold number",
@@ -31,7 +33,7 @@ export default function JaroCaseStudy() {
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Helmet>
         <title>Case Study: How Jaro Education Got 5x More Leads with AI Chroney</title>
-        <meta name="description" content="Jaro Education, one of India's leading online higher-education companies, got 5x more leads after deploying AI Chroney's AI agents on its website and WhatsApp." />
+        <meta name="description" content="Jaro Education, one of India's leading online higher-education companies, got 5x more leads after deploying AI Chroney's AI agents across its website, WhatsApp and phone calls." />
         <link rel="canonical" href="https://aichroney.com/case-studies/jaro-education" />
       </Helmet>
       <Navigation />
@@ -76,7 +78,7 @@ export default function JaroCaseStudy() {
               <div className="rounded-2xl bg-white/10 border border-white/15 backdrop-blur p-6">
                 <Brain className="w-6 h-6 text-pink-300 mb-3" />
                 <div className="text-5xl font-bold text-white mb-1">1</div>
-                <div className="text-white/70 text-sm">shared memory across website and WhatsApp</div>
+                <div className="text-white/70 text-sm">shared memory across website, WhatsApp and calls</div>
               </div>
             </motion.div>
           </div>
@@ -124,7 +126,7 @@ export default function JaroCaseStudy() {
         <section className="py-16 sm:py-24 px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-xs font-semibold uppercase tracking-wider text-purple-600 mb-2">The solution</div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0C1445] mb-10 max-w-3xl">An AI marketing engine that answers, captures and follows up</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0C1445] mb-10 max-w-3xl">An AI marketing engine that answers, follows up and calls every lead</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {solution.map((item, index) => (
                 <motion.div
@@ -133,7 +135,7 @@ export default function JaroCaseStudy() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex gap-5 rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition-shadow"
+                  className={`flex gap-5 rounded-2xl border border-gray-100 p-7 hover:shadow-lg transition-shadow ${index === solution.length - 1 ? "md:col-span-2" : ""}`}
                 >
                   <div className={`flex-shrink-0 w-12 h-12 rounded-2xl ${item.iconBg} flex items-center justify-center shadow-md`}>
                     <item.icon className="w-6 h-6 text-white" />
@@ -156,7 +158,7 @@ export default function JaroCaseStudy() {
                 <span className="bg-gradient-to-r from-[#FF4D4D] to-[#9333EA] bg-clip-text text-transparent">5x more leads</span> for the admissions team
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                With AI Chroney answering every visitor and following up instantly, Jaro Education's lead volume grew five-fold, and every lead reached a counsellor with the context needed to convert.
+                With AI Chroney answering every visitor, following up on WhatsApp and calling every lead, Jaro Education's lead volume grew five-fold, and every lead reached a counsellor with the context needed to convert.
               </p>
             </div>
             <ul className="space-y-4">
