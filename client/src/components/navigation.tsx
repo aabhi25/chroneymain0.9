@@ -165,13 +165,6 @@ export default function Navigation() {
                 Case Studies
               </Link>
               <Link 
-                href="/playground"
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                data-testid="nav-playground"
-              >
-                Playground
-              </Link>
-              <Link 
                 href="/faq"
                 className="text-muted-foreground hover:text-foreground transition-colors duration-200"
                 data-testid="nav-faq"
@@ -314,14 +307,6 @@ export default function Navigation() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Case Studies
-            </Link>
-            <Link 
-              href="/playground"
-              className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors duration-200 w-full text-left"
-              data-testid="nav-playground-mobile"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Playground
             </Link>
             <Link 
               href="/faq"

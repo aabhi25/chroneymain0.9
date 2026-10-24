@@ -16,7 +16,7 @@ AI Chroney is a business-focused AI agent platform website built with React + Ex
 ├── client/             # React frontend source
 │   ├── src/
 │   │   ├── components/ # UI components (navigation, footer, logo, etc.)
-│   │   ├── pages/      # Page components (home, faq, contact, playground, chroney-assist, whatsapp-agent, instagram-agent, ai-vista)
+│   │   ├── pages/      # Page components (home, faq, contact, chroney-assist, whatsapp-agent, instagram-agent, ai-vista)
 │   │   ├── hooks/      # Custom React hooks
 │   │   └── lib/        # Utility libraries
 │   ├── index.html      # HTML entry point
@@ -40,7 +40,6 @@ AI Chroney is a business-focused AI agent platform website built with React + Ex
 - **AI Vista** (`/products/ai-vista`): Visual Intelligence Platform product page
 - **FAQ** (`/faq`): 10 channel-focused questions with accordion UI
 - **Contact** (`/contact`): Contact info + AI chatbot CTA (no form)
-- **Playground** (`/playground`): Widget color/gradient customizer with live preview
 
 ## Key Scripts
 - `npm run dev` - Start development server (port 5000)

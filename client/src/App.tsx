@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, Redirect } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -7,7 +7,6 @@ import { HelmetProvider } from "react-helmet-async";
 import Home from "@/pages/home";
 import Contact from "@/pages/contact";
 import FAQ from "@/pages/faq";
-import Playground from "@/pages/playground";
 import ChroneyAssist from "@/pages/chroney-assist";
 import AIVista from "@/pages/ai-vista";
 import WhatsAppAgent from "@/pages/whatsapp-agent";
@@ -25,7 +24,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/contact" component={Contact} />
       <Route path="/faq" component={FAQ} />
-      <Route path="/playground" component={Playground} />
+      <Route path="/playground"><Redirect to="/" /></Route>
       <Route path="/products/chroney-assist" component={ChroneyAssist} />
       <Route path="/products/ai-vista" component={AIVista} />
       <Route path="/products/whatsapp-agent" component={WhatsAppAgent} />
