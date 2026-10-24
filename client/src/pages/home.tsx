@@ -5,6 +5,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import MarketingEngineSection from "@/components/marketing-engine-section";
 import ProofAndCustomSection from "@/components/proof-and-custom-section";
+import TryOnSlider from "@/components/try-on-slider";
 import NvidiaBadge, { NvidiaMark, NVIDIA_BADGE_PREFIX, NVIDIA_BADGE_PROGRAM } from "@/components/nvidia-badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -24,17 +25,12 @@ import { MessageCircle, Zap, Users, Settings, Code, Sparkles, RefreshCw, ArrowRi
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import nikeAirMaxImage from "@assets/stock_images/nike_air_max_90_snea_6823c7b1.jpg";
-import shopifyLogo from "@assets/Chroney_logo_1769900142416.png";
 import chroneyLogo from "@assets/Chroney_logo_1769900142416.png";
 import sourceShoe from "@assets/stock_images/red_high_heel_shoe_e_3d462f5e.jpg";
 import perfectMatch from "@assets/stock_images/red_embroidered_high_776fb38b.jpg";
 import similarMatch from "@assets/stock_images/red_stiletto_high_he_ce31121d.jpg";
 import modelNecklace from "@assets/stock_images/elegant_necklace_on__d4fa33c1.jpg";
 import modelRing from "@assets/stock_images/female_hand_fingers__72a56e21.jpg";
-import shopifyProduct1 from "@assets/stock_images/e-commerce_products__b8a7e17c.jpg";
-import shopifyProduct2 from "@assets/stock_images/e-commerce_products__391ae9f6.jpg";
-import shopifyProduct3 from "@assets/stock_images/e-commerce_products__a4ba67c6.jpg";
-import shopifyProduct4 from "@assets/stock_images/e-commerce_products__ecc1a97d.jpg";
 
 function SequentialTypingText({ texts, speed = 30 }: { texts: string[]; speed?: number }) {
   const [displayedTexts, setDisplayedTexts] = useState<string[]>([]);
@@ -430,11 +426,11 @@ export default function Home() {
                       <div className="space-y-4">
                         <div className="flex justify-end">
                           <div className="bg-gradient-to-r from-rose-400 to-pink-400 rounded-2xl px-4 py-2 text-sm text-white shadow-sm">
-                            ₹25,000?
+                            $250?
                           </div>
                         </div>
                         <div className="bg-white/80 backdrop-blur rounded-2xl p-4 shadow-sm border border-gray-100/50">
-                          <p className="text-sm text-gray-600">Best I can do is <span className="font-medium text-rose-500">₹29,000</span></p>
+                          <p className="text-sm text-gray-600">Best I can do is <span className="font-medium text-rose-500">$290</span></p>
                         </div>
                         <div className="flex justify-end">
                           <div className="bg-gradient-to-r from-rose-400 to-pink-400 rounded-2xl px-4 py-2 text-sm text-white shadow-sm">
@@ -742,123 +738,57 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Shopify Integration Section - Apple Inspired */}
-        <section className="relative overflow-hidden bg-purple-50" style={{ padding: 'clamp(120px, 12vw, 160px) 1rem' }}>
-          <div className="max-w-[960px] mx-auto text-center">
-            {/* Heading */}
-            <motion.h2 
+        <section className="py-20 sm:py-28 px-4 bg-purple-50">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-[clamp(2.5rem,5vw,3.5rem)] font-semibold text-[#1d1d1f] mb-6 tracking-tight leading-[1.1]"
-              style={{ letterSpacing: '-0.01em' }}
+              transition={{ duration: 0.6 }}
             >
-              Seamlessly integrated with <span className="bg-gradient-to-r from-[#FF4D4D] to-[#9333EA] bg-clip-text text-transparent">Shopify</span>.
-            </motion.h2>
-            
-            {/* Subheading */}
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-[clamp(1.125rem,2vw,1.5rem)] font-normal text-[#6e6e73] mb-12 max-w-[720px] mx-auto leading-relaxed"
-              style={{ letterSpacing: '0.02em' }}
-            >
-              Connect AI Chroney to Shopify — sync products, track orders, and chat with customers instantly.
-            </motion.p>
-            
-            {/* Shopify Products Screenshot Mockup */}
-            <motion.div 
+              <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-purple-600 mb-4 border border-purple-100 shadow-sm">
+                <ShoppingCart className="w-3.5 h-3.5" />
+                Built for e-commerce
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0C1445] mb-4">
+                Let shoppers <span className="bg-gradient-to-r from-[#FF4D4D] to-[#9333EA] bg-clip-text text-transparent">try before they buy</span>
+              </h2>
+              <p className="text-gray-600 text-lg mb-8">
+                Fashion and D2C brands get more than a chatbot: shoppers can see products on themselves, find items from a photo, and buy from your synced catalogue.
+              </p>
+              <div className="space-y-4">
+                {[
+                  { icon: Sparkles, title: "AI Virtual Try-On", text: "Shoppers upload a photo and see your clothes on themselves, right in the chat.", link: "/products/ai-try-on" },
+                  { icon: RefreshCw, title: "Shopify sync", text: "Products, prices and orders stay in sync, so answers are always up to date.", link: null },
+                  { icon: Search, title: "Visual search", text: "Shoppers upload a photo and find matching products with AI Vista.", link: "/products/ai-vista" },
+                ].map(item => {
+                  const body = (
+                    <div className="group flex gap-4 rounded-2xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
+                      <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-gradient-to-br from-[#FF4D4D] to-[#9333EA] flex items-center justify-center">
+                        <item.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-[#0C1445] flex items-center gap-1.5">
+                          {item.title}
+                          {item.link && <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#9333EA] group-hover:translate-x-0.5 transition-all" />}
+                        </h3>
+                        <p className="text-gray-600 text-sm">{item.text}</p>
+                      </div>
+                    </div>
+                  );
+                  return item.link ? <Link key={item.title} href={item.link}>{body}</Link> : <div key={item.title}>{body}</div>;
+                })}
+              </div>
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative mt-12 mb-8"
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="flex justify-center"
             >
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden max-w-4xl mx-auto"
-              >
-                {/* Browser Header */}
-                <div className="bg-gray-100 px-4 py-3 flex items-center gap-3 border-b border-gray-200">
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  </div>
-                  <div className="flex-1 flex justify-center">
-                    <div className="bg-white rounded-lg px-4 py-1.5 flex items-center gap-2 text-sm text-gray-500 border border-gray-200">
-                      <img src={shopifyLogo} alt="Shopify" className="w-4 h-4" />
-                      <span>your-store.myshopify.com/admin/products</span>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Product Grid */}
-                <div className="p-6 bg-gray-50">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-semibold text-gray-800">Products</h3>
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm text-gray-500">Synced with AI Chroney</span>
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    {[
-                      { img: shopifyProduct1, name: "Summer Collection", price: "₹7,499" },
-                      { img: shopifyProduct2, name: "Classic Accessories", price: "₹3,799" },
-                      { img: shopifyProduct3, name: "Premium Wear", price: "₹10,899" },
-                      { img: shopifyProduct4, name: "Designer Items", price: "₹16,799" }
-                    ].map((product, idx) => (
-                      <motion.div
-                        key={idx}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.4 + idx * 0.1 }}
-                        className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
-                      >
-                        <div className="aspect-square overflow-hidden">
-                          <img src={product.img} alt={product.name} className="w-full h-full object-cover" />
-                        </div>
-                        <div className="p-3">
-                          <p className="text-sm font-medium text-gray-800 truncate">{product.name}</p>
-                          <p className="text-sm text-[#9333EA] font-semibold">{product.price}</p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-              
-              {/* Floating AI Chroney Badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.8, type: "spring" }}
-                className="absolute -bottom-4 -right-4 sm:right-8"
-              >
-                <div className="bg-gradient-to-br from-[#E95C7B] to-[#9333EA] rounded-full p-3 shadow-xl">
-                  <Sparkles className="w-6 h-6 text-white" />
-                </div>
-              </motion.div>
+              <TryOnSlider />
             </motion.div>
-            
-            {/* Tagline */}
-            <motion.p 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-base text-[#86868b] tracking-wide"
-              style={{ letterSpacing: '0.04em' }}
-            >
-              Built for D2C brands. 100% Shopify compatible.
-            </motion.p>
           </div>
         </section>
 

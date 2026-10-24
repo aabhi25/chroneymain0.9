@@ -26,6 +26,7 @@ export default function Footer() {
 
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4 text-sm">
           <Link to="/products/ai-calling-agent" className="opacity-75 hover:opacity-100 transition-opacity">AI Calling Agent</Link>
+          <Link to="/products/ai-try-on" className="opacity-75 hover:opacity-100 transition-opacity">AI Try-On</Link>
           <Link to="/custom-ai-solutions" className="opacity-75 hover:opacity-100 transition-opacity">Custom AI Solutions</Link>
           <Link to="/case-studies/jaro-education" className="opacity-75 hover:opacity-100 transition-opacity">Case Studies</Link>
           <Link to="/contact" className="opacity-75 hover:opacity-100 transition-opacity">Contact</Link>

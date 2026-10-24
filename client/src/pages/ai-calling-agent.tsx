@@ -8,9 +8,9 @@ import { Phone, PhoneIncoming, PhoneOutgoing, Languages, CalendarCheck, FileText
 import { FaWhatsapp } from "react-icons/fa";
 
 const callScript = [
-  { speaker: "agent" as const, text: "Hi Rahul, this is Chroney calling from Horizon Realty. You asked about our 3 BHK in Whitefield earlier today. Is now a good time?" },
+  { speaker: "agent" as const, text: "Hi Rahul, this is Chroney calling from Horizon Realty. You asked about our 3-bedroom apartments at Lakeview Heights earlier today. Is now a good time?" },
   { speaker: "lead" as const, text: "Yes, tell me. What's the price range?" },
-  { speaker: "agent" as const, text: "The 3 BHK starts at ₹1.4 crore, and there's a launch offer this month. Would you like to see the site this weekend?" },
+  { speaker: "agent" as const, text: "The 3-bedroom starts at $420,000, and there's a launch offer this month. Would you like to see the site this weekend?" },
   { speaker: "lead" as const, text: "Saturday morning works." },
   { speaker: "agent" as const, text: "Done! Saturday, 11 AM. I'll send the location and brochure on WhatsApp right now." },
 ];

@@ -12,6 +12,7 @@ import AIVista from "@/pages/ai-vista";
 import WhatsAppAgent from "@/pages/whatsapp-agent";
 import InstagramAgent from "@/pages/instagram-agent";
 import AICallingAgent from "@/pages/ai-calling-agent";
+import AITryOn from "@/pages/ai-try-on";
 import JaroCaseStudy from "@/pages/case-study-jaro";
 import CustomAISolutions from "@/pages/custom-ai-solutions";
 import PrivacyPolicy from "@/pages/privacy-policy";
@@ -30,6 +31,7 @@ function Router() {
       <Route path="/products/whatsapp-agent" component={WhatsAppAgent} />
       <Route path="/products/instagram-agent" component={InstagramAgent} />
       <Route path="/products/ai-calling-agent" component={AICallingAgent} />
+      <Route path="/products/ai-try-on" component={AITryOn} />
       <Route path="/case-studies/jaro-education" component={JaroCaseStudy} />
       <Route path="/custom-ai-solutions" component={CustomAISolutions} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
